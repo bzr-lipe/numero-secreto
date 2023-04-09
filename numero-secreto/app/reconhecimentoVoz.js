@@ -9,7 +9,9 @@ recognition.start();
 recognition.addEventListener('result', onSpeak);
 
 function onSpeak(e) {
-    exibeChute(e.results[0][0].transcript);
+    chute = e.results[0][0].transcript;
+    exibeChute(chute);
+    verificaSeOValorEValido(chute);
 }
 
 function exibeChute(prop) {
