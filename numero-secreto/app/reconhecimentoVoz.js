@@ -20,3 +20,5 @@ function exibeChute(prop) {
     <div class="box">${prop}</div>
     `
 }
+
+recognition.addEventListener('end', () => recognition.start())
