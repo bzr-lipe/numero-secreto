@@ -14,6 +14,8 @@ function verificaSeOValorEValido(chute){
         document.getElementById('page-content').innerHTML=`
         <h1>Você acertou!</h1>
         <h3>O número secreto era ${numeroSecreto}</h3>
+
+        <button id="jogar-novamente" class="btn-jogar">Jogar Novamente</button>
         `
         audio.play();
     }else if (numero < numeroSecreto) {
@@ -30,3 +32,8 @@ function verificaSeOValorEValido(chute){
 function valorPassaLimites(numero){
     return numero > maiorValor || numero < menorValor
 }
+
+document.body.addEventListener('click', e => {
+    if (e.target.id == 'jogar-novamente') 
+    window.location.reload()
+})
